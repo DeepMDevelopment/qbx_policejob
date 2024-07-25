@@ -267,11 +267,6 @@ RegisterNetEvent('police:client:CuffPlayer', function()
 end)
 
 RegisterNetEvent('police:client:GetEscorted', function(playerId)
-    if not(QBX.PlayerData.metadata.isdead
-        or QBX.PlayerData.metadata.ishandcuffed
-        or QBX.PlayerData.metadata.inlaststand)
-    then return end
-
     if not IsEscorted then
         IsEscorted = true
         local dragger = GetPlayerPed(GetPlayerFromServerId(playerId))

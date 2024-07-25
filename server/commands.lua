@@ -121,6 +121,7 @@ lib.addCommand('cuff', {help = locale('commands.cuff_player')}, function(source)
 end)
 
 lib.addCommand('escort', {help = locale('commands.escort')}, function(source)
+    print('')
     TriggerClientEvent('police:client:EscortPlayer', source)
 end)
 
